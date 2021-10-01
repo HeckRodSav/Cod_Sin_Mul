@@ -38,14 +38,19 @@
                     As instruções seguidas estão disponíveis no notebook (.ipynb) fornecido, que pode ser acessado <a href="lab2/Lab2_CSM.ipynb">neste link</a>.
                 </p>
                 <p class="textlab">
-                    A seguir, apresentamos a foto geral com todos os integrantes do grupo:
+                    A seguir, apresentamos a foto geral com todos os integrantes do grupo. A resolução original da foto é de 1280x958.
                 </p>
                 <center><img src="lab2/lab2-ph01.png"></center>
 
-                <p class="textlab">Logo abaixo, apresentamos a foto modificada para a versão P&B:</p>
+                <p class="textlab">
+                    Logo abaixo, apresentamos a foto modificada para a versão P&B.
+                    A resolução da foto foi mantida e, para este tratamento, foi utilizada a função 
+                    <a href="https://docs.opencv.org/4.5.3/d8/d01/group__imgproc__color__conversions.html">cv.cvtColor()</a> com o argumento <i>COLOR_BGR2GRAY</i>.</p>
                 <center><img src="lab2/lab2-ph02.png"></center>
 
-                <p class="textlab">Finalmente, apresentamos a foto modificada para duas resoluções diferentes:</p>
+                <p class="textlab">
+                    Para modificação da resolução da foto, foi utilizada a função 
+                    <a href="https://docs.opencv.org/4.5.3/da/d54/group__imgproc__transform.html">cv.resize()</a>. Apresentamos a foto modificada para duas resoluções diferentes: 640x479 e 320x240.</p>
                 <center><img src="lab2/lab2-ph03.png"></center>
                 <br>
                 <center><img src="lab2/lab2-ph04.png"></center>
@@ -66,6 +71,22 @@
                 <center><img src="lab2/lab2-ph11.png"></center>
                 <br>
                 <center><img src="lab2/lab2-ph12.png"></center>
+
+                <p class="textlab">Finalmente, apresentamos os vídeos com as resoluções de 720p, 380p e 180p:</p>
+                <center><video width="720" controls><source src="lab2/lab2-vd01.mp4"></video></center>
+                <br>
+                <center><video width="360" controls><source src="lab2/lab2-vd01.mp4"></video></center>
+                <br>
+                <center><video width="180" controls><source src="lab2/lab2-vd01.mp4"></video></center>
+            
+            
+                <p class="titlelab">4. Conclusões</p>
+                <p class="textlab">
+                    Após a execução deste laboratório, foi possível identificar vários aspectos teóricos 
+                    sobre arquivos de imagens e vídeos, bem como a lógica de codificação dos mesmos. 
+                    É importante destacar também o uso da biblioteca OpenCV, que facilitou o tratamento 
+                    dos arquivos de midia.
+                </p>
             </div>
     </section>
 
