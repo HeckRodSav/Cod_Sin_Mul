@@ -37,6 +37,11 @@ h4 a{
   color: rgb(66, 235, 150);
 }
 
+a {
+  text-decoration: none;
+  color: rgb(66, 235, 150);
+}
+
 footer {
 	clear: both;
 	text-align: center;
@@ -113,6 +118,22 @@ footer {
   color: rgb(146, 238, 192);
   font-family: 'Ubuntu', sans-serif;
   margin: 10px;
+}
+
+.textindex {
+  font-size: 18px;
+  text-align: justify;
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 20px;
+}
+
+.textindexc {
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 20px;
 }
 
 .textlab {
