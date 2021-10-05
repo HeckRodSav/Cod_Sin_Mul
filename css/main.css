@@ -9,9 +9,10 @@ html {
 
 body{
     /*background: #195858;*/
-    background-image: linear-gradient(to bottom right, #195858, #238080);
+    background-image: repeating-linear-gradient(to bottom right, #195858, #238080);
     font-family: 'Ubuntu', sans-serif;
     margin: 0 10px;
+    background-attachment: fixed;
 }
 
 h1{
