@@ -34,13 +34,155 @@
 
                 <p class="titlelab">3. Desenvolvimento</p>
                 <p class="textlab">
-                    ...
+                    A primeira parte do trabalho está relacionada à codificação de imagem por DCT, além de algumas outras edições. Para tanto, foi utilizado o Jupyter Notebook fornecido e editado no Google Colab.
+                    O arquivo final pode ser visualizado <a href="https://drive.google.com/file/d/1gltxZt6kTvU4FODXPaPFszlezN8fluHL/view?usp=sharing">neste link.</a>
+                </p>
+                
+                <p class="textlab">   
+                    Todo este laboratório de codificação de imagens foi realizado com base nas seguintes imagens, respectivamente fotos.jpg, heitor.jpg e luiz.jpg, em suas versões originais:
+                </p>
+                <p style="text-align:center" class="textlab">
+                    <img src="lab3/fotos.jpg" class="imgs">
+                    <img src="lab3/heitor.jpg" class="imgs">
+                    <img src="lab3/luiz.jpg" class="imgs">
                 </p>
 
+                <p class="textlab">
+                    Estas imagens possuem as seguintes características:
+                    <ul class="textlabul">
+                        <li><b>fotos.jpg:</b> 1280x958 px com 3 camadas;</li>
+                        <li><b>luiz.jpg:</b> 568x502 px 3 camadas;</li>
+                        <li><b>heitor.jpg:</b> 494x494 px com 3 camadas.</li>
+                    </ul>
+                </p>
+
+                <p class="textlab">
+                    Após a separação dos canais e rearranjo para formar imagem RGB, foram impressas as imagens com cores trocadas (BGR) e reais (RGB):
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    fotos.jpg <br>
+                    <img src="lab3/fotos_BGR_RGB.jpg">
+                </p>
+                <p style="text-align:center" class="textlab">
+                    heitor.jpg <br>
+                    <img src="lab3/heitor_BGR_RGB.jpg">
+                </p>
+                <p style="text-align:center" class="textlab">
+                    luiz.jpg<br>
+                    <img src="lab3/luiz_BGR_RGB.jpg">
+                </p>
+
+                <p class="textlab">
+                    Posteriormente, foi realizada a conversão para os formatos YCrCb e HSV:
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    fotos.jpg <br>
+                    <img src="lab3/fotos_RGB_YCrCb_HSV.jpg">
+                </p>
+                <p style="text-align:center" class="textlab">
+                    heitor.jpg <br>
+                    <img src="lab3/heitor_RGB_YCrCb_HSV.jpg">
+                </p>
+                <p style="text-align:center" class="textlab">
+                    luiz.jpg<br>
+                    <img src="lab3/luiz_RGB_YCrCb_HSV.jpg">
+                </p>
+
+                <p class="textlab">
+                    Abaixo pode-se ver as imagens com as camadas RGB separadas e exibidas individualmente:
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    fotos.jpg <br>
+                    <img src="lab3/fotos_R_G_B.jpg">
+                </p>
+                <p style="text-align:center" class="textlab">
+                    heitor.jpg <br>
+                    <img src="lab3/heitor_R_G_B.jpg">
+                </p>
+                <p style="text-align:center" class="textlab">
+                    luiz.jpg<br>
+                    <img src="lab3/luiz_R_G_B.jpg">
+                </p>
+
+                <p class="textlab">
+                    Com a separação dos canais YCbCr e exibindo-os individualmente, temos as figuras a seguir:
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    fotos.jpg <br>
+                    <img src="lab3/fotos_YCrCb.jpg">
+                </p>
+                <p style="text-align:center" class="textlab">
+                    heitor.jpg <br>
+                    <img src="lab3/heitor_YCrCb.jpg">
+                </p>
+                <p style="text-align:center" class="textlab">
+                    luiz.jpg<br>
+                    <img src="lab3/luiz_YCrCb.jpg">
+                </p>
+
+                <p class="textlab">
+                    Finalmente, foram realizadas etapas de compressão das imagens JPG com perdas. Os resultados podem ser visualizados abaixo, onde a primeira imagem de cada série é a versão original 
+                    (raw), a segunda é uma versão com fator 25 e, a terceira, com fator 05.
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    fotos.jpg <br>
+                    <img src="lab3/fotos_compressed.jpg">
+                </p>
+                <p style="text-align:center" class="textlab">
+                    heitor.jpg <br>
+                    <img src="lab3/heitor_compressed.jpg">
+                </p>
+                <p style="text-align:center" class="textlab">
+                    luiz.jpg<br>
+                    <img src="lab3/luiz_compressed.jpg">
+                </p>
+
+                <p class="textlab">
+                    Para comparação, abaixo podemos verificar a variação de tamanho dos arquivos (os valores estão em bytes):
+                    <ul class="textlabul">
+                        <li><b>fotos.jpg</b> Raw: 843770; Fator 25: 81001 (9.6%); Fator 05: 31135 (3.69%)</li>
+                        <li><b>luiz.jpg</b> Raw: 75345; Fator 25: 14413 (19.13%); Fator 05: 6645 (8.82%)</li>
+                        <li><b>heitor.jpg</b> Raw: 68287; Fator 25: 11963 (17.52%); Fator 05: 5906 (8.65%)</li>
+                    </ul>
+                </p>
+
+                <p class="textlab">
+                    Em uma segunda etapa, foi aplicada a transformada discreta de cosseno em uma parte da imagem para verificar a compressão da imagem e sua relação com perdas. As imagens a seguir apresentam 
+                    o resultado.
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    fotos.jpg <br>
+                    <img src="lab3/fotos_DCT.jpg">
+                </p>
+                <p style="text-align:center" class="textlab">
+                    heitor.jpg <br>
+                    <img src="lab3/heitor_DCT.jpg">
+                </p>
+                <p style="text-align:center" class="textlab">
+                    luiz.jpg<br>
+                    <img src="lab3/luiz_DCT.jpg">
+                </p>
+
+                <p class="textlab">
+                    A última atividade desenvolvida no laboratório foi a animação criada com o Blender. Foram seguidas as instruções do professor Mário Minami, seguidas das melhorias de iluminação. 
+                    O resultado pode ser obervado abaixo (cuidado com o áudio):
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    <video width="800" controls><source src="lab3/blender.mp4"></video>
+                </p>
 
                 <p class="titlelab">4. Conclusões</p>
                 <p class="textlab">
-                    ...
+                    No desenvolvimento deste laboratório, foi possível validar a teoria de codificação de imagens de uma forma muito interessante cujos resultados práticos puderam fixar conceitos que, 
+                    caso não fossem praticados, ficariam difíceis de compreender. Destaque para a compressão de imagens, além do DCT, cuja utilização em tratamento de imagens pode ser muito importante e relevante. 
+                    Finalmente, a animação feita no Blender foi uma experiência curiosa para o grupo, que nunca tinha realizado trabalhos em softwares do gênero. 
                 </p>
             </div>
     </section>
