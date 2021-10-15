@@ -38,7 +38,7 @@
                 </p>
                 
                 <p class="textlab">   
-                    Inicialmente foram importadas as bibliotecas necessárias e realizado o download dos arquivos das imagens originais a serem codificadas ao longo do laboratório. 
+                    Inicialmente foram importadas as bibliotecas necessárias e realizado o download dos arquivos das imagens originais a serem codificadas ao longo do laboratório: fotos.jpg; heitor.jpg; e luiz.jpg. 
                     Este procedimento é semelhante ao que já foi executado anteriormente nos demais laboratórios.
                 </p>
 
@@ -69,24 +69,168 @@
                 <p class="textlab">
                     Foi calculado o erro quadrático médio (MSE) e a Relação Sinal Ruído de Pico (PSNR). 
                     O MSE é obtido somando-se o erro quadrático de reconstrução pixel a pixel entre a Imagem Original e a Reconstruída e normalizando pela dimensão (LxA) da imagem:
-                    <br><br>
+                </p>
+
+                <p class="textTex">
                     $MSE = \frac{1}{LA} \sum_{i=0}^{L}\sum_{j=0}^{A} \left[ O(i,j) - R(i,j) \right] ^2$
-                    <br><br>
+                </p>
+                <br>
+                
+                <p class="textlab">
                     Já a PSNR é definida para cada plano componente da imagem como:
-                    <br><br>
+                </p>
+
+                <p class="textTex">
                     $PSNR = 10\log_{10} \left( \frac{MAX_I^2}{MSE}\right)$
-                    <br><br>
+                </p>
+                <br>
+
+                <p class="textlab">
                     sendo $MAXI$ o valor máximo do pixel, que para 8 bits equivale a 255, logo:
-                    <br><br>
+                </p>
+                <p class="textTex">
                     $PSNR = 20\log_{10} \left( 255 \right) - 10\log_{10} \left( MSE \right)$
-                    <br><br>
+                </p>
+                <br>
+
+                <p class="textlab">
                     OBS.: Para uma imagem RGB, $MSE = MSER + MSEG + MSEB$, sendo similar definiação para YCrCb e HSV.
                 </p>
 
+                <p class="textlab">
+                    Os valores obtidos para cada foto são mostrados abaixo, seguidos das imagens reconstituídas com PSNR:
+                    <br><br>
+                    <code>fotos - MSE_Y = 8.41e-25</code><br>
+                    <code>fotos - PSNR_Y = 288.88 dB</code>
+                    <br><br>
+                    <code>fotos - MSE_Cr = 1.23e-24</code><br>
+                    <code>fotos - PSNR_Cr = 287.25 dB</code>
+                    <br><br>
+                    <code>fotos - MSE_Cb = 1.08e-24</code><br>
+                    <code>fotos - PSNR_Cb = 287.81 dB</code>
+                    <br><br>
+                    <code>luiz - MSE_Y = 8.25e-25</code><br>
+                    <code>luiz - PSNR_Y = 288.97 dB</code>
+                    <br><br>
+                    <code>luiz - MSE_Cr = 5.61e-25</code><br>
+                    <code>luiz - PSNR_Cr = 290.64 dB</code>
+                    <br><br>
+                    <code>luiz - MSE_Cb = 5.10e-25</code><br>
+                    <code>luiz - PSNR_Cb = 291.06 dB</code>
+                    <br><br>
+                    <code>heitor - MSE_Y = 1.78e-25</code><br>
+                    <code>heitor - PSNR_Y = 295.62 dB</code>
+                    <br><br>
+                    <code>heitor - MSE_Cr = 6.75e-25</code><br>
+                    <code>heitor - PSNR_Cr = 289.84 dB</code>
+                    <br><br>
+                    <code>heitor - MSE_Cb = 5.44e-25</code><br>
+                    <code>heitor - PSNR_Cb = 290.78 dB</code>
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    <img src="lab4/fotos_Y_PSNR.jpg" class="imgs">
+                    <img src="lab4/fotos_Cb_PSNR.jpg" class="imgs">
+                    <img src="lab4/fotos_Cr_PSNR.jpg" class="imgs">
+                    <br>
+                    <img src="lab4/heitor_Y_PSNR.jpg" class="imgs">
+                    <img src="lab4/heitor_Cb_PSNR.jpg" class="imgs">
+                    <img src="lab4/heitor_Cr_PSNR.jpg" class="imgs">
+                    <br>
+                    <img src="lab4/luiz_Y_PSNR.jpg" class="imgs">
+                    <img src="lab4/luiz_Cb_PSNR.jpg" class="imgs">
+                    <img src="lab4/luiz_Cr_PSNR.jpg" class="imgs">
+                </p>
+
+                <p class="textlab">
+                    Abaixo apresentam-se os resultados dos testes de multiresolução das funções <a href="https://pywavelets.readthedocs.io/en/latest/ref/2d-dwt-and-idwt.html">pywt.wavedec2()</a> 
+                    e <a href="https://pywavelets.readthedocs.io/en/latest/ref/2d-dwt-and-idwt.html">pywt.waverec2()</a>. Além disso, apresenta-se uma montagem das fotos com as duas funções.
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    <img src="lab4/fotos_wavedec2.jpg" class="imgs"><br>
+                    <img src="lab4/fotos_waverec2.jpg" class="imgs"><br>
+                    <img src="lab4/fotos_wavedec2_montagem.jpg" class="imgs">
+                    <br>
+                    <img src="lab4/heitor_wavedec2.jpg" class="imgs"><br>
+                    <img src="lab4/heitor_waverec2.jpg" class="imgs"><br>
+                    <img src="lab4/heitor_wavedec2_montagem.jpg" class="imgs">
+                    <br>
+                    <img src="lab4/luiz_wavedec2.jpg" class="imgs"><br>
+                    <img src="lab4/luiz_waverec2.jpg" class="imgs"><br>
+                    <img src="lab4/luiz_wavedec2_montagem.jpg" class="imgs">
+                </p>
+
+                <p class="textlab">
+                    Seguindo a mesma proposta, foi realizada a reconstituição de imagem colorida com base na função <a href="https://pywavelets.readthedocs.io/en/0.2.2/ref/2d-dwt-and-idwt.html">pywt.idwt2()</a> 
+                    que executa a Transformada Discreta Inversa de Wavelet (IDWT).
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    <img src="lab4/fotos_DWT_RGB_partes.jpg" class="imgs"><br>
+                    <img src="lab4/fotos_DWT_RGB_reconstruida.jpg" class="imgs"><br>
+                    <img src="lab4/fotos_DWT_reconstruida_compara.jpg" class="imgs">
+                    <br>
+                    <img src="lab4/heitor_DWT_RGB_partes.jpg" class="imgs"><br>
+                    <img src="lab4/heitor_DWT_RGB_reconstruida.jpg" class="imgs"><br>
+                    <img src="lab4/heitor_DWT_reconstruida_compara.jpg" class="imgs">
+                    <br>
+                    <img src="lab4/luiz_DWT_RGB_partes.jpg" class="imgs"><br>
+                    <img src="lab4/luiz_DWT_RGB_reconstruida.jpg" class="imgs"><br>
+                    <img src="lab4/luiz_DWT_reconstruida_compara.jpg" class="imgs">
+                </p>
+
+                <p class="textlab">
+                    Abaixo apresenta-se o resultado do cálculo da taxa de compressão de aproximação com a imagem original:
+                    <br><br>
+                    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N2</code><br>
+                    <code>fotos&nbsp;&nbsp;1227318&nbsp;25.07%&nbsp;6.35%</code><br>
+                    <code>luiz&nbsp;&nbsp;&nbsp;286214&nbsp;&nbsp;25.28%&nbsp;6.72%</code><br>
+                    <code>heitor&nbsp;246102&nbsp;&nbsp;25.33%&nbsp;6.69%</code>
+                </p>
+
+                <p class="textlab">
+                    Abaixo apresenta-se o resultado do cálculo da taxa de codificação DWT/IDWT com a imagem original:
+                    <br><br>
+                    <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RAW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DWT</code><br>
+                    <code>fotos&nbsp;&nbsp;3678774&nbsp;25.00%</code><br>
+                    <code>luiz&nbsp;&nbsp;&nbsp;855462&nbsp;&nbsp;25.00%</code><br>
+                    <code>heitor&nbsp;733150&nbsp;&nbsp;25.07%</code>
+                </p>
+
+                <p class="textlab">
+                    Finalmente, foi realizada a reconstrução da Imagem colorida e cálculo da MSE de cada plano de cor e da PSNR total.
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    <img src="lab4/fotos_DWT_reconstruida.jpg" class="imgs">
+                    <img src="lab4/heitor_DWT_reconstruida.jpg" class="imgs">
+                    <img src="lab4/luiz_DWT_reconstruida.jpg" class="imgs">
+                </p>
+
+                <p class="textlab">
+                    <br><br>
+                    <code>MSE_R = 1.10e-24</code><br>
+                    <code>MSE_G = 7.73e-25</code><br>
+                    <code>MSE_B = 6.65e-25</code><br>
+                    <code>PSNR total = 284.09 dB</code><br>
+                    <br>
+                    <code>MSE_R = 8.06e-25</code><br>
+                    <code>MSE_G = 8.11e-25</code><br>
+                    <code>MSE_B = 8.51e-25</code><br>
+                    <code>PSNR total = 284.21 dB</code><br>
+                    <br>
+                    <code>MSE_R = 3.29e-25</code><br>
+                    <code>MSE_G = 1.39e-25</code><br>
+                    <code>MSE_B = 1.06e-25</code><br>
+                    <code>PSNR total = 290.54 dB</code><br>
+                </p>
 
                 <p class="titlelab">3. Conclusões</p>
                 <p class="textlab">
-                    ...
+                    Ao longo do desenvolvimento deste laboratório, foi possível conhecer as técnicas de tratamento usando a Transformada Discreta de Wavelet, além da dua inversa, 
+                    realizando a codificação e decodificação de imagens com as funções <code>pywt</code>. Além disso, foi possível experimentar as funções de codificação multinível e verificar 
+                    as taxas de compressão em cada processo.
                 </p>
             </div>
     </section>
