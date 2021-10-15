@@ -49,6 +49,13 @@ footer {
 	line-height: 1.8;
 }
 
+code {
+  font-family: Consolas,"courier new";
+  color: white;
+  padding: 10px;
+  font-size: 100%;
+}
+
 #csm{
     color:rgb(243, 236, 145);
     font-family: 'Ubuntu', sans-serif;
@@ -142,6 +149,14 @@ footer {
   text-align: justify;
   color: #ffffff;
   font-family: 'Ubuntu', sans-serif;
+  margin: 20px;
+}
+
+.textTex {
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  /*font-family: 'Ubuntu', sans-serif;*/
   margin: 20px;
 }
 
