@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSM - Página de Relatórios</title>
+    <script src="js/main.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Laboratório <span id="csm">5</span></h1>
+    </header>
+
+    <section>
+            <div id="arealab">
+                <p class="titlelab">1. Objetivos</p>
+                <p class="textlab">
+                    Este laboratório tem os seguintes objetivos:
+                    <ul class="textlabul">
+                        <li>Constatar as características psicoacústicas de pessoas distintas de sensibilidade à intensidade, banda audível e mascaramento harmônico;</li>
+                        <li>Efetuar alguns procedimentos de medição e aferição acústicos e depois analisá-los.</li>
+                    </ul>
+                </p>
+
+                <p class="titlelab">2. Roteiro</p>
+                <p class="textlab">Abaixo pode ser visualizado o roteiro original do laboratório:</p>
+                <center><object data="media/lab5.pdf" width="800" height="500"></object></center>
+                <br><br>
+
+                <p class="titlelab">3. Desenvolvimento</p>
+                <p class="textlab">       
+                    Para o desenvolvimento deste laboratório, foi utilizado o Jupyter Notebook fornecido e editado no Google Colab. 
+                    O arquivo final pode ser visualizado <a href="https://colab.research.google.com/drive/1Ph9GVbw9-CBF73-ZD9sbSsnlDJQzqjXH#scrollTo=NdwaPYc9m1bN">neste link.</a>
+                </p>
+
+                <p class="textlab">Para melhor organização, esta seção foi dividida em tópicos para abordar os temas do roteiro.</p>
+
+                <p class="titlelab">3.1. Teste de audiometria</p>
+
+                <p class="textlab">
+                    Na primeira parte do laboratório, foi realizado um teste de audiometria pelo site <a href="https://hearingtest.online/" target="_blank">hearingtest.online</a> 
+                    (Online Hearing Test and Audiogram Printout). As imagens abaixo apresentam os resultados dos testes realizados pelos membros deste grupo.
+                </p>
+
+                <p class="textlab">Nestas duas primeiras imagens, são exibidos os resultados de Heitor e Luiz, para o teste realizado com fone de ouvido. Os símbolos "+" representam o teste em ambos os ouvidos. 
+                    Já os símbolos "X" e "O" representam, respectivamente, os resultados para o ouvido esquerdo e direito.
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    <img src="lab5/heitor-fone.jpg" class="imgs">
+                    <img src="lab5/luiz-fone.jpg" class="imgs">
+                </p>
+
+                <p class="textlab">Nas duas imagens seguintes, são exibidos os resultados de Heitor e Luiz, para o teste realizado com caixa de som. Os símbolos "+" representam o teste em ambos os ouvidos. 
+                    Não faria sentido realizar o teste em ouvidos individuais já que trata-se de um teste aberto.
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    <img src="lab5/heitor-caixa.jpg" class="imgs">
+                    <img src="lab5/luiz-caixa.jpg" class="imgs">
+                </p>
+
+                <p class="textlab">
+                    Nota-se claramente uma grande diferença na sensibilidade de cada integrante do grupo. Existem vários fatores que podem influenciar no teste, como qualidade dos fones de ouvidos, 
+                    ruído ambiente, ruído no sistema de áudio utilizado etc. Para uma comparação honesta, o ideal seria submeter os participantes às mesma condições e ambientes de teste. Independente disso, 
+                    é notável que o Luiz apresenta maior deficiência auditiva.
+                </p>
+                
+                <p class="titlelab">3.2. Teste de faixa audível</p>
+
+                <p class="textlab">
+                    Posteriormente, foi realizada uma verificação da faixa audível de cada membro do grupo pelo sinal sonoro disponível no link 
+                    <a href="https://www.youtube.com/watch?v=H-iCZElJ8m0" target="blank">https://www.youtube.com/watch?v=H-iCZElJ8m0</a>. Trata-se de um sinal senoidal que varia entre 20 Hz a 20 kHz. 
+                    Os testes foram executados em fones de ouvido, caixas de som e celular, a fim de se verificar a variação da faixa audível por pessoa e por fonte de áudio utilizada. Os resultados 
+                    podem ser vistos nas imagens abaixo.
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    <img src="lab5/faixa.jpg" class="imgs">
+                </p>
+
+                <p class="textlab">
+                    Diferenças são notadas pela capacidade do hardware em questão de reproduzir as frequências mais baixas ou mais altas.
+                </p>
+
+                <p class="titlelab">3.3. Teste de mascaramento de tons harmônicos</p>
+                
+                <p class="titlelab">4. Conclusões</p>
+                <p class="textlab">
+                    Ao longo do desenvolvimento deste laboratório, foi possível conhecer as técnicas de tratamento usando a Transformada Discreta de Wavelet, além da dua inversa, 
+                    realizando a codificação e decodificação de imagens com as funções <code>pywt</code>. Além disso, foi possível experimentar as funções de codificação multinível e verificar 
+                    as taxas de compressão em cada processo.
+                </p>
+            </div>
+    </section>
+
+    <section>
+        <div id="link">
+            <h4><a href="index.html">VOLTAR</a></h4>
+        </div>
+        <br>
+    </section>
+
+    <footer>
+        <h5>ESTI019 – Codificação de Sinais Multimídia - Alunos: Heitor Rodrigues e Luiz Bitencourt - Setembro/2021</h5>
+    </footer>
+</body>
+</html>
