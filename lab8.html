@@ -22,158 +22,23 @@
                 <p class="textlab">
                     Este laboratório tem os seguintes objetivos:
                     <ul class="textlabul">
-                        <li>Determinação dos parâmetros LPC;</li>
-                        <li>Separação Sonora/Surda;</li>
-                        <li>Espectro e Envoltória LP;</li>
-                        <li>Comparação de Codificações MPEG.</li>
+                        <li>Conhecer as opções de codificação do ffmpeg;</li>
+                        <li>Verificar várias taxas mpeg 1, camada 3 e conversão entre codecs;</li>
+                        <li>Variação de tempo.</li>
                     </ul>
                 </p>
 
                 <p class="titlelab">2. Roteiro</p>
                 <p class="textlab">Neste laboratório, foi utilizado o roteiro disponibilizado no próprio arquivo do Jupyter Notebook. O arquivo foi editado para atender à
-                    proposta e a versão final pode ser visualizada <a href="https://colab.research.google.com/drive/1AyBAChM9f74GLEucf9Tz3WagBOiprCfZ#scrollTo=8L-K1mhoJ1Gm">neste link.</a></p>
+                    proposta e a versão final pode ser visualizada <a href="https://colab.research.google.com/drive/1DD0K_iWGe0KiovPk8NL_AazO64CwVmt8#scrollTo=xRlr5WeUL3vc">neste link.</a></p>
                 <br><br>
 
                 <p class="titlelab">3. Desenvolvimento</p>
                 <p class="textlab">
-                    As gravações utilizadas neste laboratório foram as mesmas gravadas no laboratório 6. 
-                    Foram utilizados os áudios da gravação de poesia, feitos pelos integrantges do grupo no software Audacity usando microfones comuns. 
-                    Os áudios originais podem ser visualizados a seguir:
+                    ...
                 </p>
 
-                <p style="text-align:center" class="textlab">
-                    Poema de Heitor: <br>
-                    <audio controls>
-                        <source src="lab7/audio01.wav">
-                    </audio>
-                </p>
-
-                <p style="text-align:center" class="textlab">
-                    Poema de Luiz: <br>
-                    <audio controls>
-                        <source src="lab7/audio02.wav">
-                    </audio>
-                </p>
-
-                <p class="textlab">
-                    A imagem a seguir mostra o sinal gráfico de cada arquivo de áudio gravado.
-                </p>
-
-                <p style="text-align:center" class="textlab">
-                    <img src="lab7/waveplot01.png" width="75%" style="max-width: 892px">
-                </p>
-
-                <p class="textlab">
-                    Com base nos arquivos de áudio gravados, foram separadas a primeira estrofe de cada um: 
-                </p>
-
-                <p style="text-align:center" class="textlab">
-                    Poema de Heitor (primeira estrofe): <br>
-                    <audio controls>
-                        <source src="lab7/audio03.wav">
-                    </audio>
-                </p>
-
-                <p style="text-align:center" class="textlab">
-                    Poema de Luiz (primeira estrofe): <br>
-                    <audio controls>
-                        <source src="lab7/audio04.wav">
-                    </audio>
-                </p>
-
-                <p class="textlab">
-                    A imagem a seguir mostra o sinal gráfico de cada estrofe.
-                </p>
-
-                <p style="text-align:center" class="textlab">
-                    <img src="lab7/waveplot02.png" width="75%" style="max-width: 892px">
-                </p>
-
-                <p class="textlab">
-                    A seguir é exibida a janela de Hamming para cada estrofe:
-                </p>
-
-                <p style="text-align:center" class="textlab">
-                    <img src="lab7/hamming.png" width="75%" style="max-width: 595px">
-                </p>
                 
-                <p class="textlab">
-                    Abaixo pode-se ver o sinal de energia para cada estrofe.
-                </p>
-
-                <p style="text-align:center" class="textlab">
-                    <img src="lab7/energia01.png" width="75%" style="max-width: 871px">
-                </p>
-
-                <p style="text-align:center" class="textlab">
-                    <img src="lab7/energia02.png" width="75%" style="max-width: 871px">
-                </p>
-                
-                <p class="textlab">
-                    Foram calculados os parâmetros LPC, realizada a separação U/UV e espectro + envoltória LPC. 
-                </p>
-
-                <p class="textlab">
-                    Para a estrofe de Heitor:<br><br>
-                    Limiar VAD 41.20847341174478<br>
-                    Limiar U/UV 43.90847341174478<br>
-                    Sonoros = 19 e Surdos = 9
-                </p>
-
-                <p class="textlab">
-                    Os 19 segmentos sonoros estão representados na imagem abaixo.
-                </p>
-
-                <p style="text-align:center" class="textlab">
-                    <img src="lab7/segmentos01.png" width="75%" style="max-width: 1180px">
-                </p>
-
-                <p class="textlab">
-                    Os 9 segmentos surdos estão representados na imagem abaixo.
-                </p>
-
-                <p style="text-align:center" class="textlab">
-                    <img src="lab7/segmentos02.png" width="75%" style="max-width: 1180px">
-                </p>
-
-                <p class="textlab">
-                    O espectrograma desta estrofe pode ser visto abaixo.
-                </p>
-
-                <p style="text-align:center" class="textlab">
-                    <img src="lab7/espectrograma01.png" width="75%" style="max-width: 845px">
-                </p>
-
-                <p class="textlab">
-                    Para a estrofe de Luiz:<br><br>
-                    Limiar VAD 39.04239905594365<br>
-                    Limiar U/UV 41.74239905594365<br>
-                    Sonoros = 8 e Surdos = 21
-                </p>
-
-                <p class="textlab">
-                    Os 8 segmentos sonoros estão representados na imagem abaixo.
-                </p>
-
-                <p style="text-align:center" class="textlab">
-                    <img src="lab7/segmentos03.png" width="75%" style="max-width: 1180px">
-                </p>
-
-                <p class="textlab">
-                    Os 21 segmentos surdos estão representados na imagem abaixo.
-                </p>
-
-                <p style="text-align:center" class="textlab">
-                    <img src="lab7/segmentos04.png" width="75%" style="max-width: 1180px">
-                </p>
-
-                <p class="textlab">
-                    O espectrograma desta estrofe pode ser visto abaixo.
-                </p>
-
-                <p style="text-align:center" class="textlab">
-                    <img src="lab7/espectrograma02.png" width="75%" style="max-width: 845px">
-                </p>
                 
 
                 <!--<p class="titlelab">4. Conclusões</p>
