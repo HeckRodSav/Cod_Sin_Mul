@@ -8,6 +8,7 @@
     <script src="js/main.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.22.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -36,24 +37,21 @@
 
                 <p class="titlelab">3. Desenvolvimento</p>
                 
-                <!--<p class="textlab">
-                    Para este laboratório, foram usandos dois arquivos de áudio: um fornecido pelo professor e um outro obtido da conversão direta de uma mídia física (CD) em um arquivo WAV. 
-                    Abaixo exibimos os arquivos originais.
+                <p class="textlab">
+                    Inicialmente, foram gerados alguns tons com NoteSequences para criar um arquivo MIDI. O primeiro teste criou uma pequena música conhecida como "Twinkle twinkle", 
+                    cujo diagrama pitch do MIDI pode ser visto na imagem abaixo, seguido do player do som gerado.
                 </p>
 
                 <p style="text-align:center" class="textlab">
-                    abba0_320k.wav (fornecido pelo professor): <br>
-                    <audio controls>
-                        <source src="lab8/abba0__320k.wav">
-                    </audio>
+                    <img src="lab9/bokeh_plot01.png" width="75%" style="max-width: 500px">
+                </p>
+
+                <p style="text-align:center" class="textlab">
+                    <midi-player src="lab9/twinkle_twinkle.mid" sound-font visualizer="#myVisualizer"></midi-player>
+                    <midi-visualizer type="piano-roll" id="myVisualizer"></midi-visualizer>
                 </p>
                 
-                <p style="text-align:center" class="textlab">
-                    manaca.wav (gravado pelo grupo): <br>
-                    <audio controls>
-                        <source src="lab8/manaca.wav">
-                    </audio>
-                </p>
+
 
                 <p class="textlab">
                     A imagem a seguir mostra o sespectrograma do áudio "abba0__320k.wav".
@@ -231,7 +229,7 @@
                     qualidade. Analisando-se os espectrogramas da alteração de velocidade, notou-se que praticamente não houve alteração, o que significa que mesmo após a conversão os áudios mantiveram as 
                     faixas de frequências utilizadas nos arquivos originais.
                 </p>
-            -->
+            
             
             </div>
     </section>
